@@ -1,0 +1,12 @@
+.album {
+    background-color: #b8c6cc;
+    margin: 20px;
+    border-radius: 5px;
+    border: 2px solid #2b363b;
+    display: flex;
+    padding: 5px; 
+}
+.h3 {
+    margin-left: 20px;
+    color: #2b373b;
+}

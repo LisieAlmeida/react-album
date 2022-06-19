@@ -6,18 +6,21 @@ type Props = {
 }
 
 const http = axios.create({
-    baseURL: 'https://jsonplaceholder.typicode.com'
+    baseURL: 'https://jsonplaceholder.typicode.com/'
 })
 
 export const Api = {
     
     getAlbums: async() => {
-        let response = await http.get('/albums');
+        let response = await http('/albums');
         return response.data;
     },
-    getChoiceAlbums: async({data}:Props) => {
-        const idAlbum = data.id;
-        let response  =await http.get(`/albums/${idAlbum}/photos`)
+    getAlbum: async(id:string) => {
+        let response = await http(`/albums/${id}`);
+        return response.data;
+    },
+    getChoiceAlbums: async(id: string) => {
+        let response  =await http(`/albums/${id}/photos`)
         return response.data;
     }
 }

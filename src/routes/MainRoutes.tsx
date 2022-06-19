@@ -6,8 +6,9 @@ import { Page404 } from "../pages/Page404"
 export const MainRoutes = () => {
     return useRoutes([
         {path: '/', element:<Home/>},
-        {path: '/albums/album', element: <Album/>},
-        {path: '*', element: <Page404 />}   
+        {path: '/album/:id', element: <Album/>},
+        {path: '*', element:<Page404/>}
+      
 
     ])
 }

@@ -29,7 +29,10 @@ export const Home = () => {
           <div className="albumList">
           {!loading && albums.length > 0 &&
           albums.map((item, index) => (
-              <AlbumItem data={item} /> 
+              <AlbumItem 
+              key={index}
+              id={item.id}
+              title={item.title} /> 
           ))}
           </div>
       </div>

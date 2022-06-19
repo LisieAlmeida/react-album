@@ -1,18 +1,19 @@
-import { TypeAlbums } from "../../types/typeAlbums"
+
 import style from "./albumItem.module.css"
 import { Link } from 'react-router-dom';
-import { Api } from "../../api";
+
 
 
 
 type Props = {
-    data: TypeAlbums,
+    id: number,
+    title: string
 }
-export const AlbumItem = ({data}:Props) => {
+export const AlbumItem = ({id, title}: Props) => {
     return (
-        <Link to='/albums/album' className={style.link}>
+        <Link to={`/album/${id}`} className={style.link}>
             <div className={style.album}>
-                <h3 className={style.h3}>{ data.title }</h3>
+                <h3 className={style.h3}>{title}</h3>
             </div>
         </Link>
     );

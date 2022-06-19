@@ -19,7 +19,7 @@ export const Home = () => {
       setLoading(false);
       setAlbums(json);
     }
-    console.log(albums);
+
     
     return (
       <div className="App">

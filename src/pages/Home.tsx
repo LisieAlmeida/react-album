@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-
+import { Link } from 'react-router-dom';
 import { AlbumItem } from '../components/albumItem'
 import { TypeAlbums } from '../types/typeAlbums'
 import { Api } from '../api';
@@ -29,7 +29,7 @@ export const Home = () => {
           <div className="albumList">
           {!loading && albums.length > 0 &&
           albums.map((item, index) => (
-            <AlbumItem data={item} />
+              <AlbumItem data={item} /> 
           ))}
           </div>
       </div>

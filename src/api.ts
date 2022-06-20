@@ -20,7 +20,11 @@ export const Api = {
         return response.data;
     },
     getChoiceAlbums: async(id: string) => {
-        let response  =await http(`/albums/${id}/photos`)
+        let response  =await http(`/albums/${id}/photos`);
         return response.data;
-    }
+    },
+    getPhotos: async(id:string) => {
+        let response = await http(`/photos/${id}`);
+        return response.data;
+    } 
 }
